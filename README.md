@@ -14,7 +14,7 @@ Develop a real-time data processing system to monitor weather conditions and pro
 - **Node.js**
 - **Express.js** (RESTful API)
 - **Javascript**
-- **hbs**
+- **hbs**(handlebars)
 - **HTML/CSS**
 - **MongoDB**
 - **Postman** (API Testing)
@@ -64,5 +64,6 @@ This will start the app on http://localhost:3000
 
 -- To run this on a local machine you need to change Database url in ‘/connection.js’ file to 
 ‘mongodb://127.0.0.1:27017/Weather’ local url.
+
 -- On render web site link if the server is not responding quickly it may be due to free tier resource use to host this static site. So please wait for 40-50 sec and then press the evaluate button again. It will surely run.
 
