@@ -22,6 +22,7 @@ Develop a real-time data processing system to monitor weather conditions and pro
 ## NOTE:
 
 --Here I set the Threshold Temperature 28 C.
+
 -- To run this on a local machine you need to change Database url in ‘/connection.js’ file to 
 ‘mongodb://127.0.0.1:27017/Weather’ local url.
 
