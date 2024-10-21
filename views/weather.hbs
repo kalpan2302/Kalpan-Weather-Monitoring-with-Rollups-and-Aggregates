@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Weather Dashboard</h1>
+        {{#if alerts.length}}
+        <div class="alert-box">
+            {{#each alerts}}
+            <div class="alert-message">{{this}}</div>
+            {{/each}}
+        </div>
+        {{/if}}
+        <div class="weather-grid">
+            {{#each weatherSummaries}}
+            <div class="weather-card">
+                <h3>{{city}}</h3>
+                <p>Avg Temp: {{avgTemp}} °C</p>
+                <p>Max Temp: {{maxTemp}} °C</p>
+                <p>Min Temp: {{minTemp}} °C</p>
+                <p>Condition: {{dominantCondition}}</p>
+            </div>
+            {{/each}}
+        </div>
+
+        <div class="chart-container">
+            <h2>Temperature Overview</h2>
+            <canvas id="tempChart"></canvas>
+        </div>
+
+        <input type="hidden" id="cityLabels" value="{{cityLabels}}">
+        <input type="hidden" id="avgTemps" value="{{avgTemps}}">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/js/chart.js"></script>
+</body>
+
+</html>
