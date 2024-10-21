@@ -5,7 +5,7 @@ const CONDITION_THRESHOLD = 'Rain';
 const TEMP_THRESHOLD = 28; // Example: 35°C
 
 const fetchData = async () => {
-    const cities = ['Delhi', 'Mumbai', 'Chennai', 'Bangalore', 'Kolkata', 'Hyderabad'];
+    const cities = ['Delhi', 'Mumbai', 'Chennai', 'Bangalore', 'Kolkata', 'Hyderabad','Surat','Pune','Ahmedabad','Jaipur'];
     const alerts = []; // Store alert messages
 
     for (const city of cities) {
@@ -49,7 +49,7 @@ const renderDashboard = async (req, res) => {
     const alerts = await fetchData();
 
     // Fetch the most recent weather summaries for display
-    const weatherSummaries = await Weather.find({}).sort({ timestamp: -1 }).limit(6);
+    const weatherSummaries = await Weather.find({}).sort({ timestamp: -1 });
 
     const cityLabels = weatherSummaries.map(summary => summary.city);
     const avgTemps = weatherSummaries.map(summary => summary.avgTemp);
